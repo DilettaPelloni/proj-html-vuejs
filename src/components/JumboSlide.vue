@@ -28,7 +28,7 @@
     padding-bottom: 2rem;
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 40%;
+    background-size: auto 80%;
     display: flex;
     align-items: center;
     justify-content: center;

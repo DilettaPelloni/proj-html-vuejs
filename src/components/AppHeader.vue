@@ -87,7 +87,7 @@
     .container {
         margin: 0 auto;
         height: 100%;
-        max-width: 1200px;
+        max-width: 1000px;
         display: flex;
         justify-content: space-between;
         align-items: center;
