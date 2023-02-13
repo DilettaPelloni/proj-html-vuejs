@@ -7,11 +7,24 @@
                 store,
             };//return
         },//data
+        created() {
+            window.addEventListener('scroll', this.scrollHeader)
+        },//created
+        methods: {
+            scrollHeader() {
+                if (window.scrollY > 5) {
+                    this.$refs.header.classList.add('scrolled');
+                }
+                else {
+                    this.$refs.header.classList.remove('scrolled');
+                }
+            },//scrollHeader
+        }
 	}
 </script>
 
 <template>
-    <header>
+    <header ref="header">
         <div class="container">
             <!-- BOTTONE ORDINI -->
             <a href="#" class="button">
@@ -82,6 +95,10 @@
         top: 0;
         left: 0;
         z-index: 90;
+
+        &.scrolled {
+            background-color: $nq-black-bg;
+        }
     }
 
     .container {
