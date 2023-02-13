@@ -1,7 +1,36 @@
+//FONT
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Sofia+Sans+Condensed:wght@400;700&display=swap');
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Sofia Sans Condensed', sans-serif;
+
 // RESET
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+// COLORI
+$orange-bg: #D2401E;
+
+// TESTI
+body * {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+//LINK E BOTTONI
+
+a {
+    text-decoration: none;
+    &.button {
+        padding: 1rem 2rem;
+        display: inline-block;
+        color: white;
+        letter-spacing: 0.1em;
+        background-color: $orange-bg;
+
+    }
+}
+
+
 
