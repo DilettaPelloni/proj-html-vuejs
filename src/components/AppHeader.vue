@@ -21,20 +21,15 @@
             <!-- NAVBAR -->
             <nav>
                 <ul>
-                    <li>
-                        <img src="../assets/svg/svg-0.svg" alt="active icon">
-                        <a href="#">
-                            home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            pages
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            menu
+                    <li v-for="item, i in store.menuOptions.slice(0,3)">
+                        <img v-if="i == 0"
+                            src="../assets/svg/svg-0.svg"
+                            alt="active icon"
+                        />
+                        <a :href="item.url"
+                            @click="activeMenu = i"
+                        >
+                            {{ item.name }}
                         </a>
                     </li>
                 </ul>
@@ -42,19 +37,9 @@
                 <img src="../assets/img/h5-logo-divided-header.png" alt="header logo">
 
                 <ul>
-                    <li>
-                        <a href="#">
-                            event
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            landing
+                    <li v-for="item, i in store.menuOptions.slice(3)">
+                        <a :href="item.url">
+                            {{ item.name }}
                         </a>
                     </li>
                 </ul>
@@ -90,33 +75,35 @@
 
     header {
         padding: 1rem 0;
+        height: 130px;
         width: 100%;
-        position: sticky;
+
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 90;
-
-        background-color: aqua;
     }
 
     .container {
         margin: 0 auto;
+        height: 100%;
         max-width: 1200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        background-color: darkcyan;
-
         nav {
+            height: 100%;
+            color: white;
             display: flex;
             align-items: center;
             ul {
+                height: 100%;
                 list-style: none;
                 display: flex;
 
                 // background-color: saddlebrown;
                 li {
+                    height: 100%;
                     padding: 1rem;
                     display: flex;
                     align-items: center;
@@ -125,17 +112,17 @@
                         margin-right: 0.2rem;
                         height: 0.7rem;
                         filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(206deg) brightness(108%) contrast(101%);
-                    }
+                    }//img
                     a {
                         color: white;
                         text-transform: uppercase;
-                    }
+                    }//a
                 }//li
             }//ul
             & > img {
                 display: block;
                 margin: 0 1rem;
-                height: 90px;
+                height: 100%;
             }//img
         }//nav
 
