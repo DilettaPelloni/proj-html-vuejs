@@ -6,7 +6,7 @@
         },//props
         methods: {
             getImgPath(img) {
-                return new URL(`../assets/img/${img}`, import.meta.url).href;
+                return new URL(`../../assets/img/${img}`, import.meta.url).href;
             },//getImgPath
         },//methods
 	}

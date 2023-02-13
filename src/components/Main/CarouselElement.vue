@@ -1,35 +1,24 @@
 <script>
-    import JumboSlide from './JumboSlide.vue'
+    import { store } from '../../store';
+import JumboSlide from '../Main/JumboSlide.vue'
 	export default {
 		name:'CarouselElement',
         components: {
             JumboSlide,
         },//components
+        props: {
+            component: String,
+            list: String,
+        },//props
         data() {
             return {
+                store,
                 activeSlide: '0',
-                jumboSlides: [
-                    {
-                        bgImg:'h3-rev-img-5.png',
-                        centerImg:'h3-rev-img-6.png',
-                        altTxt:'crust-img',
-                    },
-                    {
-                        bgImg:'h3-rev-img-1.png',
-                        centerImg:'h3-rev-img-2.png',
-                        altTxt:'taste-img',
-                    },
-                    {
-                        bgImg:'h3-rev-img-3.png',
-                        centerImg:'h3-rev-img-4.png',
-                        altTxt:'urban-img',
-                    }
-                ],//jumboSlides
             };//return
         },//data
         methods: {
             nextSlide() {
-                if(this.activeSlide == this.jumboSlides.length - 1) {
+                if(this.activeSlide == this.store[this.list].length - 1) {
                     this.activeSlide = 0;
                 }
                 else {
@@ -38,7 +27,7 @@
             },//nextSlide
             prevSlide() {
                 if(this.activeSlide == 0) {
-                    this.activeSlide = this.jumboSlides.length - 1;
+                    this.activeSlide = this.store[this.list].length - 1;
                 }
                 else {
                     this.activeSlide--;
@@ -62,11 +51,13 @@
             NEXT
         </button>
 
-        <JumboSlide
-            v-for="slide, i in jumboSlides"
+        <component
+            :is="component"
+            v-for="slide, i in store[list]"
             :slide="slide"
             v-show="activeSlide == i"
-        />
+        > </component>
+
 
     </section>
 </template>
