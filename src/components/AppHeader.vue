@@ -100,43 +100,34 @@
         z-index: 90;
 
         &.scrolled {
-            background-color: $nq-black-bg;
             height: 70px;
+            background-color: $nq-black-bg;
         }
     }
 
     .container {
-        margin: 0 auto;
+        @include flex-row-center;
         height: 100%;
-        max-width: 1000px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // -------- STILE NAV --------
         nav {
             height: 100%;
             color: white;
-            display: flex;
-            align-items: center;
+            @include flex-row-center;
             ul {
+                display: flex;
                 height: 100%;
                 list-style: none;
-                display: flex;
-
-                // background-color: saddlebrown;
                 li {
+                    @include flex-row-center;
                     height: 100%;
-                    padding: 1rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img {
+                    //icone
+                    img { 
                         margin-right: 0.2rem;
                         height: 0.7rem;
                         filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(206deg) brightness(108%) contrast(101%);
-                    }//img
+                    }//icone
                     a {
-                        color: white;
-                        text-transform: uppercase;
+                        padding: 1rem;
                     }//a
                 }//li
             }//ul
@@ -147,32 +138,22 @@
             }//img
         }//nav
 
+        // -------- STILE USER TOOLS --------
         .user-tools {
+            @include flex-row-center;
             color: white;
-            display: flex;
-            align-items: center;
-            a {
-                color: white;
-                text-transform: uppercase;
-            }//a
 
             & > * {
                 margin-left: 1rem;
-            }
+            } //tutti i figli di user tools
 
             .cart {
-                display: flex;
-                align-items: center;
+                @include flex-row-center;
                 .cart-icon {
                     position: relative;
                     .item-counter {
-                        display: inline-block;
-                        height: 0.8rem;
-                        width: 0.8rem;
-                        line-height: 0.8rem;
-                        font-size: 0.8rem;
-                        text-align: center;
-                        border-radius: 50%;
+                        @include round-label(0.8rem);
+                        font-size: 0.7rem;
                         font-weight: bold;
                         color: $orange-bg;
                         background-color: white;
@@ -187,7 +168,6 @@
                 }//cart-icon
             }//cart
         }//user tools
-
-    }
+    }//container
 
 </style>
