@@ -62,25 +62,12 @@
         }//img
 
         .link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
+            @include flex-row-center;
             @include pattern-bg;
-
+            @include overlay-position;
             opacity: 0;
-            position: absolute;
-            top:0;
-            bottom: 0;
-            right: 0;
-            left: 0;
             a {
-                display: block;
-                height: 3rem;
-                width: 3rem;
-                line-height: 3rem;
-                border-radius: 50%;
-                text-align: center;
+                @include round-label(3rem);
                 color: white;
                 background-color: $orange-bg;
             }//a
@@ -88,7 +75,7 @@
 
         &:hover .link {
             opacity: 1;
-        }
+        }//card hover x link
     }//card
 }
 </style>

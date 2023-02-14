@@ -106,13 +106,13 @@
     }
 
     .container {
-        @include flex-row-center;
+        @include flex-between-center;
         height: 100%;
         // -------- STILE NAV --------
         nav {
             height: 100%;
             color: white;
-            @include flex-row-center;
+            @include flex-between-center;
             ul {
                 display: flex;
                 height: 100%;
@@ -140,7 +140,7 @@
 
         // -------- STILE USER TOOLS --------
         .user-tools {
-            @include flex-row-center;
+            @include flex-between-center;
             color: white;
 
             & > * {

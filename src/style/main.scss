@@ -32,7 +32,15 @@ $green-text: #339966;
     background-repeat: no-repeat;
 }
 
+// @include flex-row-center;
 @mixin flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include flex-between-center;
+@mixin flex-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +54,15 @@ $green-text: #339966;
     line-height: $size;
     text-align: center;
     border-radius: 50%;
+}
+
+// @include overlay-position;
+@mixin overlay-position {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 //CONTAINER
