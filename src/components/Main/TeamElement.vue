@@ -91,8 +91,11 @@
 
             <div class="info-box">
                 <div class="text-box">
+                    <!-- NOME -->
                     <h4>{{ memb.name }}</h4>
+                    <!-- RUOLO -->
                     <p>{{memb.role}}</p>
+                    <!-- SOCIAL -->
                     <div class="social-box">
                         <a :href="social.url" v-for="social in memb.socials">
                             <font-awesome-icon
@@ -102,7 +105,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!-- CHIUSURA TEAM MEMB -->
     </section>
 </template>
 
@@ -120,15 +123,8 @@ section {
 
         .info-box {
             @include pattern-bg;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-
+            @include flex-center;
+            @include overlay-position;
             opacity: 0;
 
             .text-box {
@@ -136,30 +132,26 @@ section {
                 height: 90%;
                 color: white;
                 background-color: $orange-bg;
-                display: flex;
+                @include flex-center;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
 
                 h4 {
-                    text-transform: uppercase;
                     font-size: 1.5rem;
-                }
+                }//h4
 
                 p {
                     text-transform: capitalize;
                     font-size: 0.8rem;
                     font-family: 'Open Sans', sans-serif;
-                }
+                }//p
 
                 .social-box {
                     margin-top: 1rem;
                     a {
                         padding: 0.5rem;
-                    }
-                }
-            }
-
+                    }//a
+                }//social box
+            }//text-box
         }//info-box
 
         &:hover .info-box {
@@ -167,5 +159,4 @@ section {
         }//card hover x info-box
     }
 }//section
-
 </style>
