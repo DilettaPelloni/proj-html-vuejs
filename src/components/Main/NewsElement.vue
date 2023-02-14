@@ -66,11 +66,7 @@
             justify-content: center;
             align-items: center;
             
-            background-color: #FFFFFF;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse' patternTransform='scale(0.09)'%3E%3Ccircle id='a' data-color='outline' fill='none' stroke='%23CDCDCD' stroke-width='13.68' r='.5'%3E%3C/circle%3E%3Cuse xlink:href='%23a' y='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='100' y='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='50' y='50'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            @include pattern-bg;
 
             opacity: 0;
             position: absolute;

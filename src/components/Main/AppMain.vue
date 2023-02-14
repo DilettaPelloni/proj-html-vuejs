@@ -1,13 +1,18 @@
 <script>
-    import CarouselElement from './CarouselElement.vue'
-    import NewsElement from './NewsElement.vue'
-    import SpecialMenuElement from './SpecialMenuElement.vue'
+    import CarouselElement from './CarouselElement.vue';
+    import NewsElement from './NewsElement.vue';
+    import SpecialMenuElement from './SpecialMenuElement.vue';
+    import QuoteElement from './QuoteElement.vue';
+    import TeamElement from './TeamElement.vue';
+
 	export default {
 		name:'AppMain',
         components: {
             CarouselElement,
             NewsElement,
             SpecialMenuElement,
+            QuoteElement,
+            TeamElement,
         },//components
 	}
 </script>
@@ -25,6 +30,10 @@
         </section>
 
         <SpecialMenuElement/>
+
+        <QuoteElement/>
+
+        <TeamElement/>
 
     </main>
 </template>
