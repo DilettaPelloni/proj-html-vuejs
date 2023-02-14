@@ -4,6 +4,7 @@
     import SpecialMenuElement from './SpecialMenuElement.vue';
     import QuoteElement from './QuoteElement.vue';
     import TeamElement from './TeamElement.vue';
+    import ClientsElement from './ClientsElement.vue';
 
 	export default {
 		name:'AppMain',
@@ -13,6 +14,7 @@
             SpecialMenuElement,
             QuoteElement,
             TeamElement,
+            ClientsElement,
         },//components
 	}
 </script>
@@ -34,6 +36,8 @@
         <QuoteElement/>
 
         <TeamElement/>
+
+        <ClientsElement/>
 
     </main>
 </template>
