@@ -15,13 +15,15 @@ import {
 import {
     faEye,
     faCalendar,
-    faClock
+    faClock,
+    faFaceSadCry
 } from '@fortawesome/free-regular-svg-icons';
 
 import {
     faInstagram,
     faTwitter,
-    faFacebookF
+    faFacebookF,
+    faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -34,7 +36,9 @@ library.add(
     faLocationDot,
     faUserGroup,
     faCalendar,
-    faClock
+    faClock,
+    faLinkedinIn,
+    faFaceSadCry
 );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
