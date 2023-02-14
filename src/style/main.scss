@@ -19,6 +19,7 @@ $light-text: #767676;
 $light-gold-text: #d3cfaf;
 $gold-text: #b7903c;
 $dark-orange-text: #ab4027;
+$dark-border: #1f1f1f;
 
 //BACKGROUND 
 @mixin pattern-bg { 
@@ -34,6 +35,10 @@ body * {
     font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
+input {
+    font-size: inherit;
+}
+
 //LINK E BOTTONI
 
 a {
@@ -43,6 +48,7 @@ a {
         padding: 1rem 2rem;
         display: inline-block;
         color: white;
+        text-transform: uppercase;
         letter-spacing: 0.1em;
         background-color: $orange-bg;
 

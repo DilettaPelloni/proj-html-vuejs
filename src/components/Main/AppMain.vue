@@ -7,6 +7,7 @@
     import ClientsElement from './ClientsElement.vue';
     import MenuElement from './MenuElement.vue';
     import EventElement from './EventElement.vue';
+    import BookingElement from './BookingElement.vue';
 
 	export default {
 		name:'AppMain',
@@ -19,6 +20,7 @@
             ClientsElement,
             MenuElement,
             EventElement,
+            BookingElement,
         },//components
 	}
 </script>
@@ -46,6 +48,8 @@
         <MenuElement/>
 
         <EventElement/>
+
+        <BookingElement/>
 
     </main>
 </template>
