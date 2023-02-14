@@ -6,6 +6,7 @@
     import TeamElement from './TeamElement.vue';
     import ClientsElement from './ClientsElement.vue';
     import MenuElement from './MenuElement.vue';
+    import EventElement from './EventElement.vue';
 
 	export default {
 		name:'AppMain',
@@ -17,6 +18,7 @@
             TeamElement,
             ClientsElement,
             MenuElement,
+            EventElement,
         },//components
 	}
 </script>
@@ -42,6 +44,8 @@
         <ClientsElement/>
 
         <MenuElement/>
+
+        <EventElement/>
 
     </main>
 </template>
