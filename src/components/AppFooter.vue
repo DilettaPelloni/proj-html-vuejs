@@ -11,4 +11,7 @@
 </template>
 
 <style  lang="scss" scoped>
+    footer {
+        height: 1000px;
+    }
 </style>

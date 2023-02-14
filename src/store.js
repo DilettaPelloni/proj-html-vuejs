@@ -49,4 +49,18 @@ export const store = reactive ({
             altTxt:'urban-img',
         }
     ],//jumboSlides
+    revSlides: [
+        {
+            quote:'"forget the trendy pizza shops, this hidden spot makes the best new york-style pizza slice in naples"',
+            name:'washington post 2018',
+        },
+        {
+            quote:'"La pizza è molto buona. La mangio anche a colazione col capuccino"',
+            name:'diletta 2023',
+        },
+        {
+            quote:'"La pizza è molto buona, ma un altro carosello anche no grazie. Free the carosello!"',
+            name:'diletta 2023',
+        }
+    ],//revSlides
 });

@@ -55,6 +55,7 @@
     justify-content: space-between;
     .card {
         width: calc(25% - 5px);
+        cursor: pointer;
         position:relative;
         img {
             display: block;

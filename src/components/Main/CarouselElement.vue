@@ -1,10 +1,12 @@
 <script>
     import { store } from '../../store';
-import JumboSlide from '../Main/JumboSlide.vue'
+    import JumboSlide from '../Main/JumboSlide.vue';
+    import RevSlide from '../Main/RevSlide.vue';
 	export default {
 		name:'CarouselElement',
         components: {
             JumboSlide,
+            RevSlide,
         },//components
         props: {
             component: String,
@@ -53,11 +55,12 @@ import JumboSlide from '../Main/JumboSlide.vue'
 
         <component
             :is="component"
-            v-for="slide, i in store[list]"
+            v-for="slide, i,  in store[list]"
             :slide="slide"
+            :slideArray="list"
+            :index="i"
             v-show="activeSlide == i"
         > </component>
-
 
     </section>
 </template>
@@ -80,6 +83,7 @@ import JumboSlide from '../Main/JumboSlide.vue'
         color: $orange-bg;
         position: absolute;
         transform: translateY(-50%);
+        z-index: 50;
         &.prev-btn {
             top: 50%;
             left:-1.5rem;
@@ -90,6 +94,6 @@ import JumboSlide from '../Main/JumboSlide.vue'
             right:-1.5rem;
             transform: rotate(-90deg);
         }//next
-    }
-}
+    }//button
+}//carousel
 </style>
