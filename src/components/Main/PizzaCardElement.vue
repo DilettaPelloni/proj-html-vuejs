@@ -43,27 +43,20 @@
 
 .card {
     width: 30%;
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
     .img-box {
         width: 60%;
         position: relative;
-        
         img {
             display: block;
             width: 100%;
         }//img
         .sold {
-            height: 2.5rem;
-            width: 2.5rem;
-            line-height: 2.5rem;
-            background-color: $orange-bg;
-            color: white;
-            text-align: center;
-            text-transform: uppercase;
+            @include round-label(2.5rem);
             font-size: 0.6rem;
-            border-radius: 50%;
+            color: white;
+            background-color: $orange-bg;
             position: absolute;
             top: 5px;
             right: 5px;
@@ -72,9 +65,8 @@
 
     h4 {
         margin-top: 0.8rem;
-        text-transform: uppercase;
         color: $gold-text;
-    }
+    }//name
     span {
         margin-right: 0.5rem;
         color: $orange-bg;
@@ -83,8 +75,7 @@
         &.old-price {
             text-decoration: line-through;
             color:$light-gold-text;
-        }
-    }
-}
-
+        }//old-price
+    }//price
+}//card
 </style>
