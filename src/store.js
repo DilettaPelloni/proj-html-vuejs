@@ -55,12 +55,12 @@ export const store = reactive ({
             name:'washington post 2018',
         },
         {
-            quote:'"La pizza è molto buona. La mangio anche a colazione col capuccino"',
+            quote:'"La pizza è molto buona. La mangierei anche a colazione col capuccino"',
             name:'diletta 2023',
         },
         {
             quote:'"La pizza è molto buona, ma un altro carosello anche no grazie. Free the carosello!"',
-            name:'diletta 2023',
+            name:'ignoto 2023',
         }
     ],//revSlides
     pizzas: [

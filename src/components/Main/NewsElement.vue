@@ -62,7 +62,7 @@
         }//img
 
         .link {
-            @include flex-row-center;
+            @include flex-center;
             @include pattern-bg;
             @include overlay-position;
             opacity: 0;

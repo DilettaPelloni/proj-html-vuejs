@@ -32,8 +32,8 @@ $green-text: #339966;
     background-repeat: no-repeat;
 }
 
-// @include flex-row-center;
-@mixin flex-row-center {
+// @include flex-center;
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;

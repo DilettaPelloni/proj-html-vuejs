@@ -118,7 +118,7 @@
                 height: 100%;
                 list-style: none;
                 li {
-                    @include flex-row-center;
+                    @include flex-center;
                     height: 100%;
                     //icone
                     img { 
@@ -148,7 +148,7 @@
             } //tutti i figli di user tools
 
             .cart {
-                @include flex-row-center;
+                @include flex-center;
                 .cart-icon {
                     position: relative;
                     .item-counter {

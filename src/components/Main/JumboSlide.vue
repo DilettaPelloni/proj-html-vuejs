@@ -29,9 +29,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     img {
         height: 350px;
     }//img

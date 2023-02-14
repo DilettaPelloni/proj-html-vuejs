@@ -54,29 +54,24 @@
 
 .slide {
     padding: 5rem 0;
-    position: relative;
     .container {
-        margin: 0 auto;
         max-width: 40%;
         text-align: center;
-        text-transform: uppercase;
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         svg {
             font-size: 4rem;
             color: $gold-text;
-        }//svg
+        }//quote mark
         h2 {
             margin-top: 0.5rem;
             color: $dark-title;
         }//h2
         p {
             margin-top: 0.5rem;
-            letter-spacing: 0.1em;
             font-size: 0.8rem;
             font-weight: bold;
+            letter-spacing: 0.1em;
             color: $orange-bg;
         }//p
         
