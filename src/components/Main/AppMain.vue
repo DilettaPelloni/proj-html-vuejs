@@ -1,13 +1,13 @@
 <script>
     import CarouselElement from './CarouselElement.vue'
     import NewsElement from './NewsElement.vue'
-    import SpecialElement from './SpecialElement.vue'
+    import SpecialMenuElement from './SpecialMenuElement.vue'
 	export default {
 		name:'AppMain',
         components: {
             CarouselElement,
             NewsElement,
-            SpecialElement,
+            SpecialMenuElement,
         },//components
 	}
 </script>
@@ -24,7 +24,7 @@
             <CarouselElement :component="'RevSlide'" :list="'revSlides'"/>
         </section>
 
-        <SpecialElement/>
+        <SpecialMenuElement/>
 
     </main>
 </template>

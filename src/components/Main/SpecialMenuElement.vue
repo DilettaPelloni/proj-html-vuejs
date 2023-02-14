@@ -1,6 +1,6 @@
 <script>
 	export default {
-		name:'SpecialElement',
+		name:'SpecialMenuElement',
         data() {
             return {
                 menuSpecials: [
@@ -60,7 +60,7 @@
 
         .col {
             width: 50%;
-            height: 40vw;
+            height: 30vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,7 +70,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 img {
-                    max-width: 40%;
+                    height: 50%;
                 }
             }
 
