@@ -30,15 +30,12 @@
 
 <template>
     <section>
+        <!-- -------------------COLONNA EVENTI------------------- -->
         <div class="col event-col">
-
-            <!-- EVENTI -->
             <div class="text-box">
-
                 <!-- TITOLO -->
                 <span>made with love</span>
                 <h2>delish pizza deals</h2>
-
                 <!-- EVENTI -->
                 <div class="event-box" >
                     <div class="event" v-for="event in events">
@@ -58,10 +55,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- IMMAGINE -->
+        <!-- -------------------IMMAGINE------------------- -->
         <div class="col img-col">
             <img src="../../assets/img/h3-img-5a.jpg" alt="comic">
         </div>
@@ -72,81 +68,72 @@
 <style  lang="scss" scoped>
 
 section {
-        display: flex;
-        align-items: flex-start;
-        .col {
+    display: flex;
+    align-items: flex-start;
+    .col {
+        width: 50%;
+    }//entrambe le colonne
+    .img-col {
+        img {
+            width: 100%;
+        }
+    }//colonna con immagine
+
+    .event-col {
+        @include flex-center;
+        padding-block: 5rem;
+        background-image: url('../../assets/img/cielostellato.PNG');
+        .text-box {
+            padding-right: 20px;
             width: 50%;
-            &.img-col {
-                img {
-                    width: 100%;
-                }
-            }
+            span {
+                color: $orange-bg;
+            }//sovra-titolo arancione
+            h2 {
+                font-size: 2rem;
+                color: white;
+            }//titolo
+            .event-box {
+                margin-top: 1rem;
+                .event {
+                    display: flex;
+                    padding-block: 2rem;
+                    &:not(:first-child, :last-child) {
+                        border-top: 1.5px dotted $gold-text;
+                        border-bottom: 1.5px dotted $gold-text;
+                    }// bordi per gli eventi centrali
 
-            &.event-col {
-                padding: 4rem 0;
-                background-image: url('../../assets/img/cielostellato.PNG');
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .text-box {
-                    padding-right: 20px;
-                    width: 50%;
-                    span {
-                        color: $orange-bg;
-                    }
-                    h2 {
-                        font-size: 2rem;
-                        text-transform: uppercase;
-                        color: white;
-                    }
-
-                    .event-box {
-                        margin-top: 1rem;
-                        .event {
-                            display: flex;
-                            align-items: flex-start;
-                            padding: 2rem 0;
-                            &:not(:first-child, :last-child) {
-                                border-top: 1.5px dotted $gold-text;
-                                border-bottom: 1.5px dotted $gold-text;
-                            }
-
-                            .date {
-                                padding-right: 1rem;
-                                text-align: center;
-                                h2 {
-                                    margin-top: -10px;
-                                    font-size: 3rem;
-                                    color: $dark-orange-text;
-                                }
-                                h4 {
-                                    font-size: 1.5rem;
-                                    line-height: 0.2;
-                                    text-transform: uppercase;
-                                    color: white;
-                                }
-                            }//date
-                            .desc {
-                                h3 {
-                                    color: white;
-                                    text-transform: uppercase;
-                                }
-                                p {
-                                    margin-top: 0.5rem;
-                                    color: $orange-bg;
-                                    font-size: 0.7rem;
-                                    svg {
-                                        margin-right: 0.2rem;
-                                    }
-                                }
-                            }
-                        }//event
-                    }//event box
-                }//text-box
-            }//menu-col
-        }//col
-
-
-
-    }
+                    .date {
+                        margin-right: 1rem;
+                        text-align: center;
+                        h2 {
+                            margin-top: -10px;
+                            font-size: 3rem;
+                            color: $dark-orange-text;
+                        }//giorno
+                        h4 {
+                            font-size: 1.5rem;
+                            line-height: 0.2;
+                            color: white;
+                        }//mese
+                    }//date
+                    .desc {
+                        h3 {
+                            color: white;
+                        }//titolo
+                        p {
+                            margin-top: 0.5rem;
+                            font-size: 0.7rem;
+                            text-transform: none;
+                            color: $orange-bg;
+                            svg {
+                                margin-right: 0.2rem;
+                            }//icona
+                        }//indirizzo
+                    }//dettagli evento
+                }//event
+            }//event box
+        }//text-box
+    }//event-col
+}//section
 </style>
