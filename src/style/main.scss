@@ -38,6 +38,7 @@ $green-text: #339966;
     align-items: center;
 }
 
+// @include round-label(size);
 @mixin round-label ($size) {
     display: inline-block;
     height: $size;

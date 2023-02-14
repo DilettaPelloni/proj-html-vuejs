@@ -4,7 +4,7 @@
 		name:'RevSlide',
         props: {
             slide: Object,
-            slideArray: String,
+            slideList: String,
             index: Number,
         },//props
         data() {
@@ -40,7 +40,7 @@
             <!-- INDICATORI -->
             <div class="indicators">
                 <font-awesome-icon icon="fa-solid fa-circle"
-                    v-for="item, i in store[slideArray]"
+                    v-for="item, i in store[slideList]"
                     :class="{
                         active: index == i
                     }"

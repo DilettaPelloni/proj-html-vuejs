@@ -36,6 +36,9 @@
                 }
             },//prevSlide
         },//methods
+        mounted() {
+            setInterval(() => {this.nextSlide()}, 3000)
+        },//mounted
 	}
 </script>
 
@@ -57,7 +60,7 @@
             :is="component"
             v-for="slide, i,  in store[list]"
             :slide="slide"
-            :slideArray="list"
+            :slideList="list"
             :index="i"
             v-show="activeSlide == i"
         > </component>
@@ -68,6 +71,7 @@
 <style  lang="scss" scoped>
 .carousel {
     position: relative;
+    //per tagliare i bottoni
     overflow: hidden;
 
     button {
@@ -78,9 +82,9 @@
         font-size: 0.8rem;
         border-radius: 50%;
         border: none;
-        outline: none;
         background-color: white;
         color: $orange-bg;
+
         position: absolute;
         transform: translateY(-50%);
         z-index: 50;
