@@ -37,7 +37,7 @@
 
 <template>
     <section>
-        <div class="box">
+        <div class="container">
             <a :href="client.url" v-for="client in clients">
                 <img :src="getImgPath(client.logo)" alt="big cheese">
             </a>
@@ -47,21 +47,18 @@
 
 <style  lang="scss" scoped>
 section {
+    padding-block: 5rem;
     background-color: $light-bg;
-    .box {
-        margin: 0 auto;
-        padding: 4rem 0;
-        max-width: 1000px;
+    .container {
         display: flex;
         flex-wrap: wrap;
         a {
             width: 20%;
-            display: block;
             img {
                 display: block;
                 width: 100%
             }//img
         }//a
-    }//box
+    }//container
 }
 </style>
