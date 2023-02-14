@@ -15,7 +15,14 @@
 <template>
     <div class="card">
         <!-- IMMAGINE -->
-        <img :src="getImgPath(pizza.img)" :alt="pizza.name">
+        <div class="img-box">
+            <img :src="getImgPath(pizza.img)" :alt="pizza.name">
+
+            <!-- ETICHETTE -->
+            <div class="sold" v-if="pizza.sold">
+                sold
+            </div>
+        </div>
 
         <!-- NOME -->
         <h4>{{ pizza.name }}</h4>
@@ -39,10 +46,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    img {
-        display: block;
+    .img-box {
         width: 60%;
-    }
+        position: relative;
+        
+        img {
+            display: block;
+            width: 100%;
+        }//img
+        .sold {
+            height: 2.5rem;
+            width: 2.5rem;
+            line-height: 2.5rem;
+            background-color: $orange-bg;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }//sold
+    }//img-box
+
     h4 {
         margin-top: 0.8rem;
         text-transform: uppercase;

@@ -69,7 +69,7 @@ section {
 
     .card-box {
         margin-top: 3rem;
-        width: 110%;
+        width: 115%;
         display: flex;
     }//card-box
 
