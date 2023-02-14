@@ -28,7 +28,7 @@
         <div class="container">
             <!-- BOTTONE ORDINI -->
             <a href="#" class="button">
-                ORDER ONLINE
+                order online
             </a>
 
             <!-- NAVBAR -->
@@ -47,7 +47,10 @@
                     </li>
                 </ul>
 
-                <img src="../assets/img/h5-logo-divided-header.png" alt="header logo">
+                <img id="header-logo"
+                    src="../assets/img/h5-logo-divided-header.png"
+                    alt="header logo"
+                />
 
                 <ul>
                     <li v-for="item, i in store.menuOptions.slice(3)">
@@ -58,7 +61,7 @@
                 </ul>
             </nav>
 
-            <!-- LINK UTENTE -->
+            <!-- TOOLS UTENTE -->
             <div class="user-tools">
                 <!-- CARRELLO -->
                 <div class="cart">
@@ -98,6 +101,7 @@
 
         &.scrolled {
             background-color: $nq-black-bg;
+            height: 70px;
         }
     }
 
@@ -136,7 +140,7 @@
                     }//a
                 }//li
             }//ul
-            & > img {
+            #header-logo {
                 display: block;
                 margin: 0 1rem;
                 height: 100%;
