@@ -1,20 +1,22 @@
 <script>
     import CarouselElement from './CarouselElement.vue'
     import NewsElement from './NewsElement.vue'
+    import SpecialElement from './SpecialElement.vue'
 	export default {
 		name:'AppMain',
         components: {
             CarouselElement,
-            NewsElement
+            NewsElement,
+            SpecialElement,
         },//components
 	}
 </script>
 
 <template>
     <main>
-        <section class="jumbo">
+        <div class="jumbo">
             <CarouselElement :component="'JumboSlide'" :list="'jumboSlides'"/>
-        </section>
+        </div>
 
         <NewsElement/>
 
@@ -22,11 +24,16 @@
             <CarouselElement :component="'RevSlide'" :list="'revSlides'"/>
         </section>
 
+        <SpecialElement/>
+
     </main>
 </template>
 
 <style  lang="scss" scoped>
 
+section {
+    margin: 6px 0;
+}
 .jumbo {
     padding: 150px 0 40px;
     background-image: url(../../assets/img/cielostellato.PNG);

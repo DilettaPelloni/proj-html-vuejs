@@ -50,7 +50,6 @@
 
 <style  lang="scss" scoped>
 .card-box {
-    padding: 6px 0;
     display: flex;
     justify-content: space-between;
     .card {

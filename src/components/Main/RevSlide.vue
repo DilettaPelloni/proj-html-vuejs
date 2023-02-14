@@ -46,12 +46,6 @@
                     }"
                 />
             </div>
-
-            <!-- ICONA PIZZA -->
-            <span class="pizza-icon">
-                <img src="../../assets/svg/svg-4.svg" alt="pizza icon">
-            </span>
-
         </div>
     </div>
 </template>
@@ -96,15 +90,6 @@
                 &.active {
                     color: $gold-text;
                 }
-            }
-        }
-
-        .pizza-icon {
-            position: absolute;
-            right: 30px;
-            bottom: 20px;
-            img {
-                height: 20px;
             }
         }
     }//container
