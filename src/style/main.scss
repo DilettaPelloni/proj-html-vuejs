@@ -94,15 +94,19 @@ input {
 a {
     text-decoration: none;
     color: inherit;
-    &.button {
-        padding: 0.7rem 1.7rem;
-        display: inline-block;
-        color: white;
-        letter-spacing: 0.1em;
-        background-color: $orange-bg;
-
-    }
 }
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.7rem 1.7rem;
+    letter-spacing: 0.1em;
+    color: white;
+    border: none;
+    background-color: $orange-bg;
+}
+
+
 
 
 

@@ -7,7 +7,7 @@
 <template>
     <section>
         <div class="container">
-            <form>
+            <form @submit.prevent>
                 <span class="input-box">
                     <input type="text" placeholder="1 Person">
                     <font-awesome-icon icon="fa-solid fa-user-group" />
@@ -27,69 +27,67 @@
                     <font-awesome-icon icon="fa-regular fa-clock" />
                 </span>
 
-                <a href="#" class="button">
+                <button class="button">
                     book a table
-                </a>
+                </button>
             </form>
+            <p>*Powered by OpenTable</p>
         </div>
     </section>
 </template>
 
 <style  lang="scss" scoped>
-    section {
-        background-image: url('../../assets/img/h3-background-img-3.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+section {
+    background-image: url('../../assets/img/h3-background-img-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        .container {
-            margin: 0 auto;
-            padding: 4rem 0;
-            max-width: 1000px;
-            text-align: center;
-            form {
-                .input-box {
-                    padding: 0 1rem;
-                    height: 3rem;
-                    min-width: 170px;
-                    background-color: white;
-                    border: 2px solid $dark-border;
+    .container {
+        padding-block: 5rem;
+        text-align: center;
+        form {
+            @include flex-between-center;
+
+            .input-box {
+                @include flex-between-center;
+                padding: 0 1rem;
+                height: 3rem;
+                width: 200px;
+                font-size: 0.8rem;
+                border: 2px solid $dark-border;
+                background-color: white;
+                input {
+                    height: 100%;
+                    font-family: 'Open Sans', sans-serif;
+                    border: none;
+                    outline: none;
+                    flex-grow: 1;
+                }//input
+                svg {
                     font-size: 0.8rem;
-                    display: inline-flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    
-                    input {
-                        display: block;
-                        height: 100%;
-                        font-family: 'Open Sans', sans-serif;
-                        border: none;
-                        outline: none;
-                        flex-grow: 1;
-                    }//input
-
-                    svg {
-                        font-size: 0.8rem;
-                        color: $gold-text;
-                    }
-
-                    ::-webkit-calendar-picker-indicator {
-                        display: none;
-                    }//icon calendario input date
-                }//input-box
-
-                span:not(.input-box) {
-                    display: inline-block;
-                    margin: 0 1rem;
-                    color: white;
-                    text-transform: uppercase;
-                }
-                .button {
-                    margin-left: 2.5rem;
-                    min-width: 170px;
-                    font-size: 0.7rem;
-                }
-            }
-        }
-    }
+                    color: $gold-text;
+                }//icona
+                ::-webkit-calendar-picker-indicator {
+                    display: none;
+                }//per nascondere icona automatica calendario
+            }//input-box
+            span:not(.input-box) {
+                color: white;
+            }//testo fra gli input
+            .button {
+                margin-left: 2.5rem;
+                height: 3rem;
+                width: 200px;
+                font-size: 0.7rem;
+            }//button
+        }//form
+        p {
+            margin-top: 0.5rem;
+            @include paragraph;
+            font-size: 0.6rem;
+            text-align: start;
+            color: white;
+        }//powered by
+    }//container
+}//section
 </style>
