@@ -33,6 +33,7 @@
 <template>
     <footer>
         <div class="col info-col">
+            <!-- ------------------------- SEZIONE SUPERIORE ------------------------- -->
             <section class="upper-sec">
                 <!-- COLONNA INDIRIZZI -->
                 <div class="addresses">
@@ -45,25 +46,24 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- COLONNA ORARI -->
                 <div class="work hours">
                     <h4>working hours</h4>
-
+                    <!-- MONDAY -->
                     <div class="day">
                         <h5>
                             monday
                         </h5>
                         <p class="red">Kitchen Closed</p>
                     </div>
-
+                    <!-- TUESDAY-FRIDAY -->
                     <div class="day">
                         <h5>
                             tuesday until friday
                         </h5>
                         <p>09:00 - 22:00</p>
                     </div>
-
+                    <!-- SATURDAY -->
                     <div class="day">
                         <h5>
                             Saturday
@@ -71,14 +71,14 @@
                         </h5>
                         <p>Saturday 11am to midnight</p>
                     </div>
-
+                    <!-- SUNDAY -->
                     <div class="day">
                         <h5>
                             sunday
                         </h5>
                         <p>09:00 - 22:00</p>
                     </div>
-
+                    <!-- SOCIAL CTA -->
                     <div class="social">
                         <span>follow us: </span>
                         <a href="#">
@@ -94,13 +94,16 @@
                             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
                         </a>
                     </div>
-
                 </div>
+                <!-- COLONNA FRASE -->
                 <div class="quote">
                     <h3>the don peppe crew first and foremost values an authentic, well baked slice of pizza.</h3>
                 </div>
             </section>
+
+            <!-- ------------------------- SEZIONE INFERIORE ------------------------- -->
             <section class="lower-sec">
+                <!-- CREATED BY -->
                 <div class="credit">
                     <span>
                         Created with 
@@ -109,103 +112,102 @@
                         <a href="https://github.com/DilettaPelloni">Diletta</a>
                     </span>
                 </div>
+                <!-- BOLLINO -->
                 <div>
                     <img src="../assets/img/footer-bottom-img.png" alt="footer bottom">
                 </div>
             </section>
         </div>
+        <!-- ------------------------- COLONNA IMMAGINE ------------------------- -->
         <div class="col img-col">
         </div>
     </footer>
 </template>
 
 <style  lang="scss" scoped>
-    footer {
-        display: flex;
-        .col {
-            width: 50%;
-        }
-        .info-col {
-            padding: 4rem 2rem 2rem;
-            background-image: url('../assets/img/cielostellato.PNG');
-            .upper-sec {
-                display: flex;
-                & > * {
-                    width: calc(100% / 3);
-                }
+footer {
+    display: flex;
+    .col {
+        width: 50%;
+    }
+    .info-col {
+        padding: 5rem 2rem 2rem;
+        background-image: url('../assets/img/cielostellato.PNG');
 
+        // --------- SEZIONE SUPERIORE ---------
+        .upper-sec {
+            display: flex;
+            & > * {
+                width: calc(100% / 3);
+            }//il contenuto della sezione superiore è diviso in 3 colonne
+            h4, h5 {
+            color: $gold-text;
+            }//titoli colonne
+            ul {
+                list-style: none;
+                li {
+                    margin-top: 0.7rem;
+                }//li
+            }//ul
+            p {
+                @include paragraph;
+                font-size: 0.6rem;
+                color:$lighter-text;
+            }//testo piccolo
+
+            .day {
+                margin-top: 0.7rem;
+                .red {
+                    color: $orange-bg;
+                }//testo rosso
+            }//sezioni working hours
+
+            .social {
+                margin-top: 2rem;
+                span {
+                    font-weight: bold;
+                    color: $gold-text;
+                }//cta
+                svg {
+                    margin-left: 0.5rem;
+                    font-size: 0.6rem;
+                    color: white;
+                }//icone
+            }//social cta
+            .quote {
+                padding: 0 2rem;
                 h3 {
                     color: white;
-                    text-transform: uppercase;
-                }
+                }//testo frase
+            }//colonna frase
+        }//upper-sec
 
-                h4, h5 {
+        // --------- SEZIONE INFERIORE ---------
+        .lower-sec {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .credit span {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 0.6rem;
+                text-transform: none;
                 color: $gold-text;
-                text-transform: uppercase;
-                }
-                ul {
-                    list-style: none;
-                    li {
-                        margin-top: 0.7rem;
-                    }
-                }
-                p {
-                    font-size: 0.6rem;
-                    font-family: 'Open Sans', sans-serif;
-                    color:$lighter-text;
-                }
-
-                .day {
-                    margin-top: 0.7rem;
-                    .red {
-                        color: $orange-bg;
-                    }
-                }
-
-                .social {
-                    margin-top: 2rem;
-                    span {
-                        color: $gold-text;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                    }
-                    svg {
-                        margin-left: 0.5rem;
-                        color: white;
-                        font-size: 0.6rem;
-                    }
-                }
-
-                .quote {
-                    padding: 0 2rem;
-                }
-                
-            }//upper-sec
-            .lower-sec {
-                margin-top: 1.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                .credit span {
-                    color: $gold-text;
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 0.6rem;
-                    a {
-                        color: $green-text;
-                        font-family: inherit;
-                    }
-                }
-                img {
-                    height: 80px;
-                }
-            }
-        }
-        .img-col {
-            background-image: url('../assets/img/footer-img-1.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-    }
+                a {
+                    color: $green-text;
+                }//diletta
+            }//created by
+            img {
+                height: 80px;
+            }//bollino
+        }//lower sec
+    }//info-col
+    .img-col {
+        background-image: url('../assets/img/footer-img-1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }//img-col
+}//footer
 </style>
