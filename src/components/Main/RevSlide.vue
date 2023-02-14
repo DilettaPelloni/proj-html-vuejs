@@ -84,9 +84,9 @@
                 color: $light-gold-text;
                 &.active {
                     color: $gold-text;
-                }
-            }
-        }
+                }// dot active
+            }//dot
+        }//indicatori
     }//container
 }//slide
 

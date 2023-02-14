@@ -60,10 +60,7 @@
 
         .col {
             width: 50%;
-            height: 30vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
 
             &.img-col {
                 background-image: url('../../assets/img/h1-img-4.jpg');
@@ -71,22 +68,18 @@
                 background-size: cover;
                 img {
                     height: 50%;
-                }
-            }
-
+                }//img
+            }//img-col
             &.menu-col {
                 .text-box {
                     padding-right: 20px;
-                    max-width: 50%;
+                    width: 50%;
                     h2,h3 {
                         font-size: 2rem;
-                        text-transform: uppercase;
                         color:$dark-title;
                     }
                     p {
-                        color: $light-text;
-                        font-size: 0.8rem;
-                        font-family: 'Open Sans', sans-serif;
+                        @include paragraph;
                     }
                     .menu-box {
                         margin-top: 1rem;
@@ -96,16 +89,16 @@
                         }
                         p {
                             margin-top: 0.4rem;
+                            @include paragraph;
                             font-size: 0.7rem;
                         }
                         .price-col {
-                            padding-right: 0.8rem;
+                            margin-right: 0.8rem;
                             h3 {
                                 color: $dark-orange-text
                             }//h3
                         }//price-col
                     }//menu-box
-
                 }//text-box
             }//menu-col
         }//col

@@ -65,6 +65,14 @@ $green-text: #339966;
     left: 0;
 }
 
+// @include paragraph;
+@mixin paragraph {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: none;
+    color: $light-text;
+}
+
 //CONTAINER
 .container {
     margin: 0 auto;
