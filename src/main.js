@@ -10,13 +10,13 @@ import {
     faCircle,
     faLocationDot,
     faUserGroup,
+    faDroplet
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
     faEye,
     faCalendar,
-    faClock,
-    faFaceSadCry
+    faClock
 } from '@fortawesome/free-regular-svg-icons';
 
 import {
@@ -38,7 +38,7 @@ library.add(
     faCalendar,
     faClock,
     faLinkedinIn,
-    faFaceSadCry
+    faDroplet
 );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

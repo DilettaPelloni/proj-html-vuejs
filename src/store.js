@@ -106,5 +106,47 @@ export const store = reactive ({
             price: '$50.00 - $95.00',
             sold: false,
         },
+        {
+            img: 'h3-product-img-1a-100x100.png',
+            name: 'pizza bismarck',
+            oldPrice: '$15.00',
+            price: '$30.00',
+            sold: false,
+        },
+        {
+            img: 'h3-product-img-2a-150x150.png',
+            name: 'fior di zucca',
+            oldPrice: '',
+            price: '$7.00 - $50.00',
+            sold: false,
+        },
+        {
+            img: 'h3-product-img-3a-150x150.png',
+            name: 'valdostana',
+            oldPrice: '',
+            price: '$55.00',
+            sold: true,
+        },
+        {
+            img: 'h3-product-img-4a-150x150.png',
+            name: 'pizza tartufata',
+            oldPrice: '',
+            price: '$45.00',
+            sold: false,
+        },
+        {
+            img: 'h3-product-img-5a-150x150.png',
+            name: 'francescana',
+            oldPrice: '',
+            price: '$25.00',
+            sold: false,
+        },
+        {
+            img: 'h3-product-img-6a-100x100.png',
+            name: 'campagnola',
+            oldPrice: '',
+            price: '$50.00 - $95.00',
+            sold: false,
+        },
     ]
 });

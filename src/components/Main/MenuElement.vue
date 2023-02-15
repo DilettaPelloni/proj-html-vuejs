@@ -10,8 +10,35 @@
         data() {
             return {
                 store,
+                isDown: false,
+                startX: '',
+                scrollLeft: '',
             };//return
-        },//data    
+        },//data
+        methods: {
+            grab(event) {
+                const cardBox = this.$refs.cardBox;
+
+                this.isDown = true;
+                cardBox.classList.add('active');
+                this.startX = event.clientX - cardBox.offsetLeft;
+                this.scrollLeft = cardBox.scrollLeft;
+            },//grab
+            leave() {
+                const cardBox = this.$refs.cardBox;
+
+                this.isDown = false;
+                cardBox.classList.remove('active');
+            },//leave
+            drag(event) {
+                const cardBox = this.$refs.cardBox;
+
+                if(!this.isDown) return;
+                const x = event.clientX - cardBox.offsetLeft;
+                const walk = (x - this.startX);
+                cardBox.scrollLeft = this.scrollLeft - walk;
+            },//drag
+        },//methods
 	}
 </script>
 
@@ -26,7 +53,13 @@
         </div>
 
         <!-- CARDS -->
-        <div class="card-box">
+        <div class="card-box"
+            ref="cardBox"
+            @mousedown="grab"
+            @mouseleave="leave"
+            @mouseup="leave"
+            @mousemove.prevent="drag"
+        >
             <PizzaCardElement
                 v-for="pizza in store.pizzas"
                 :pizza="pizza"
@@ -39,9 +72,6 @@
 <style  lang="scss" scoped>
 section {
     padding-block: 5rem;
-    @include flex-center;
-    flex-direction: column;
-    overflow: hidden;
 
     .title-box {
         max-width: 40%;
@@ -63,8 +93,16 @@ section {
 
     .card-box {
         margin-top: 3rem;
-        width: 115%;
         display: flex;
+        overflow-x: auto;
+        cursor: pointer;
+        &.active {
+            cursor: grabbing;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
     }//card-box
 }//section
 </style>

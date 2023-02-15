@@ -51,11 +51,11 @@
 
 .cart-bar {
     height: 100vh;
-    width: 300px;
+    width: 200px;
     position:fixed;
     top: 0;
     right: 0;
-    z-index: 90;
+    z-index: 50;
 
     opacity: 0;
 
@@ -69,7 +69,7 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        z-index: 99;
+        z-index: 60;
         a {
             @include flex-center;
             margin-left: auto;

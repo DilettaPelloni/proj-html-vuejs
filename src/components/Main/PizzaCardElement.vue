@@ -42,9 +42,12 @@
 <style  lang="scss" scoped>
 
 .card {
-    width: 30%;
+    margin-bottom: 1rem;
+    width: 18vw;
     @include flex-center;
     flex-direction: column;
+    flex-shrink: 0;
+    user-select: none;
     .img-box {
         width: 60%;
         position: relative;

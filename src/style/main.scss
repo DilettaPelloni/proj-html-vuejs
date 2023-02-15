@@ -74,6 +74,13 @@ $green-text: #339966;
     color: $light-text;
 }
 
+// CLEARFIX
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 //CONTAINER
 .container {
     margin: 0 auto;
@@ -113,6 +120,20 @@ button {
     cursor: pointer;
 }
 
+// SCROLLBAR
+
+::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+    background: $light-bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $orange-bg;
+}
 
 
 

@@ -107,7 +107,7 @@
                 <div class="credit">
                     <span>
                         Created with 
-                        <font-awesome-icon icon="fa-regular fa-face-sad-cry" />
+                        <font-awesome-icon icon="fa-solid fa-droplet" />
                         by
                         <a href="https://github.com/DilettaPelloni">Diletta</a>
                     </span>
