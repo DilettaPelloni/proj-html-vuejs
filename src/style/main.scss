@@ -14,6 +14,7 @@
 $orange-bg: #D2401E;
 $nq-black-bg: #1c1c1c;
 $light-bg: #f6f7f2;
+$pink-bg: #ef2853;
 $dark-title: #303030;
 $light-text: #767676;
 $lighter-text: #cdcdcd;
@@ -106,6 +107,10 @@ a {
     color: white;
     border: none;
     background-color: $orange-bg;
+}
+
+button {
+    cursor: pointer;
 }
 
 
