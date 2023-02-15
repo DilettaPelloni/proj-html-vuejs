@@ -74,13 +74,6 @@ $green-text: #339966;
     color: $light-text;
 }
 
-// CLEARFIX
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
 //CONTAINER
 .container {
     margin: 0 auto;
