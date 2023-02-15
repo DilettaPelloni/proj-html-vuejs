@@ -66,7 +66,7 @@
     .button-box {
         width: 100%;
         position: absolute;
-        top: 50%;
+        top: 70%;
         right: 0;
         transform: translateY(-50%);
         z-index: 60;

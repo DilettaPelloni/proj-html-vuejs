@@ -87,7 +87,7 @@
 
         position: absolute;
         transform: translateY(-50%);
-        z-index: 50;
+        z-index: 100;
         &.prev-btn {
             top: 50%;
             left:-1.5rem;

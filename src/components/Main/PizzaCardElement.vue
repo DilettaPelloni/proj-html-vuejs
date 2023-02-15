@@ -42,7 +42,6 @@
 <style  lang="scss" scoped>
 
 .card {
-    margin-bottom: 1rem;
     width: 18vw;
     @include flex-center;
     flex-direction: column;
